@@ -36,6 +36,10 @@ function App() {
       <Link to={"/formulario"}>
         FORMULÁRIO
       </Link>
+      <br/>
+      <Link to={"/cadProfessor"}>
+        PROFESSOR
+      </Link>
     </>
   )
 }

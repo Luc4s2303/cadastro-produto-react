@@ -5,6 +5,8 @@ import Listagem from "./pages/Listagem"
 import Formulario from "./pages/Formulario"
 import DetalheProduto from "./pages/DetalheProduto"
 import Alterar from "./pages/Alterar"
+import CadProfessor from "./pages/CadProfessor"
+
 
 const AppRoutes = () => {
 
@@ -16,7 +18,9 @@ const AppRoutes = () => {
             <Route path="/formulario" element={<Formulario />} />
             <Route path="/detalhe" element={<DetalheProduto />} />
             <Route path="/alterar" element={<Alterar />} />
-        </Routes>
+            <Route path="/cadProfessor" element={<CadProfessor />} />
+       
+            </Routes>
     )
 }
 
