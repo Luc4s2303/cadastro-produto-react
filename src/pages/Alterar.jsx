@@ -53,29 +53,12 @@ const Alterar = () => {
         <h1>Alterar Produto</h1>
         <Formik
             initialValues={{
-                id: produto.id,
-                nome: produto.nome,
-                descricao: produto.descricao,
-                codigoBarras: produto.codigoBarras,
-                foto: produto.foto,
-                preco: produto.preco,
-                categoria: produto.categoria,
-                destaque: produto.destaque,
                 statusProd: produto.statusProd
             }}
             onSubmit={(values, actions) => {
-
                 if(values.nome.length > 0){
                         setTimeout(() => {
                         setDados({
-                            id: values.id,
-                            nome: values.nome,
-                            descricao: values.descricao,
-                            codigoBarras: values.codigoBarras,
-                            foto: values.foto,
-                            preco: values.preco,
-                            categoria: values.categoria,
-                            destaque: values.destaque,
                             statusProd: values.statusProd
                         })
                         setClicou(true)
@@ -88,98 +71,7 @@ const Alterar = () => {
         >
             {props => (
                 <form onSubmit={props.handleSubmit}>
-                    <div>
-                        <input
-                            type="number"
-                            onChange={props.handleChange}
-                            onBlur={props.handleBlur}
-                            value={produto.id}
-                            placeholder='0'
-                            name="id"
-                            disabled
-                        />
-                        {props.errors.id && <div id="feedback">{props.errors.id}</div>}
-                    </div>
-
-                    <div>
-                        <input
-                            type="text"
-                            onChange={props.handleChange}
-                            onBlur={props.handleBlur}
-                            value={props.values.nome}
-                            placeholder="Nome do Produto"
-                            name="nome"
-                        />
-                        {props.errors.nome && <div id="feedback">{props.errors.nome}</div>}
-                    </div>
-
-                    <div>
-                        <input
-                            type="text"
-                            onChange={props.handleChange}
-                            onBlur={props.handleBlur}
-                            value={props.values.descricao}
-                            name="descricao"
-                            placeholder="Descrição do Produto"
-                        />
-                        {props.errors.descricao && <div id="feedback">{props.errors.descricao}</div>}
-                    </div>
-                    <div>
-                        <input
-                            type="text"
-                            onChange={props.handleChange}
-                            onBlur={props.handleBlur}
-                            value={props.values.codigoBarras}
-                            name="codigoBarras"
-                            placeholder="1112223334445"
-                        />
-                        {props.errors.codigoBarras && <div id="feedback">{props.errors.codigoBarras}</div>}
-                    </div>
-                    <div>
-                        <input
-                            type="image"
-                            onChange={props.handleChange}
-                            onBlur={props.handleBlur}
-                            value={props.values.foto}
-                            name="foto"
-                            placeholder="Foto do Produto"
-                            hidden
-                        />
-                        {props.errors.foto && <div id="feedback">{props.errors.foto}</div>}
-                    </div>
-                    <div>
-                        <input
-                            type="text"
-                            onChange={props.handleChange}
-                            onBlur={props.handleBlur}
-                            value={props.values.preco}
-                            name="preco"
-                            placeholder="0.0"
-                        />
-                        {props.errors.preco && <div id="feedback">{props.errors.preco}</div>}
-                    </div>
-                    <div>
-                        <input
-                            type="text"
-                            onChange={props.handleChange}
-                            onBlur={props.handleBlur}
-                            value={props.values.categoria}
-                            name="categoria"
-                            placeholder="Categoria do Produto"
-                        />
-                        {props.errors.categoria && <div id="feedback">{props.errors.categoria}</div>}
-                    </div>
-                    <div>
-                        <input
-                            type="text"
-                            onChange={props.handleChange}
-                            onBlur={props.handleBlur}
-                            value={props.values.destaque}
-                            name="destaque"
-                            placeholder="Destaque do Produto"
-                        />
-                        {props.errors.destaque && <div id="feedback">{props.errors.destaque}</div>}
-                    </div>
+                   
                     <div>
                         <select
                             type="text"
